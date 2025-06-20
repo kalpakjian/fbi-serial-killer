@@ -32,13 +32,11 @@ admin page: http://127.0.0.1:8000/admin/
    python3 manage.py dumpdata fbi_serial_killer --indent 2 > fbi_serial_killer/fixtures/data.json
 
 2. 格式化資料集
-dumpdata已使用--indent 2格式化，data.json應為可讀JSON。
+   dumpdata已使用--indent 2格式化，data.json應為可讀JSON。
 
 3. 清理原始資料
-python manage.py flush
+   python manage.py flush
 
-4 .匯入資料：
-python3 manage.py loaddata fbi_serial_killer/fixtures/data.json
-驗證：訪問http://127.0.0.1:8000/captures/，應顯示20筆捉拿記錄。
-
-   
+4. 匯入資料：
+   python3 manage.py loaddata fbi_serial_killer/fixtures/data.json   
+   驗證：訪問http://127.0.0.1:8000/captures/，應顯示20筆捉拿記錄。
