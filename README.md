@@ -19,6 +19,6 @@ python3 fbi_serial_killer/seed_data.py
 
 python3 manage.py runserver
 
-訪問http://127.0.0.1:8000/captures/。
+訪問http://127.0.0.1:8000/captures/
 
 admin page: http://127.0.0.1:8000/admin/
