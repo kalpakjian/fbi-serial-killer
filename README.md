@@ -39,4 +39,5 @@ admin page: http://127.0.0.1:8000/admin/
 
 4. 匯入資料：
    python manage.py loaddata data.json   
-   驗證：訪問http://127.0.0.1:8000/captures/，應顯示20筆捉拿記錄。
+   驗證：訪問http://127.0.0.1:8000/captures/
+   應顯示20筆捉拿記錄。
