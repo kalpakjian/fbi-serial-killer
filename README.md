@@ -22,3 +22,23 @@ python3 manage.py runserver
 訪問http://127.0.0.1:8000/captures/
 
 admin page: http://127.0.0.1:8000/admin/
+
+
+## 資料測試
+1. 匯出資料：
+   ```bash
+   python3 manage.py dumpdata fbi_serial_killer --indent 2 > fbi_serial_killer/fixtures/data.json
+2. 清理資料庫：
+rm db.sqlite3
+python3 manage.py migrate
+
+3. 格式化資料集
+dumpdata已使用--indent 2格式化，data.json應為可讀JSON。
+python3 -m json.tool fbi_serial_killer/fixtures/data.json > fbi_serial_killer/fixtures/data_formatted.json
+mv fbi_serial_killer/fixtures/data_formatted.json fbi_serial_killer/fixtures/data.json
+
+4 .匯入資料：
+python3 manage.py loaddata fbi_serial_killer/fixtures/data.json
+驗證：訪問http://127.0.0.1:8000/captures/，應顯示20筆捉拿記錄。
+
+   
