@@ -31,10 +31,10 @@ admin page: http://127.0.0.1:8000/admin/
 1. 匯出資料：
    python manage.py dumpdata fbi_serial_killer --indent 2 > data.json
 
-2. 格式化資料集
+2. 格式化資料集：
    dumpdata已使用--indent 2格式化，data.json應為可讀JSON。
 
-3. 清理原始資料
+3. 清理原始資料：
    python manage.py flush
 
 4. 匯入資料：
