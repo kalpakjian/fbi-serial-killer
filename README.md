@@ -12,3 +12,13 @@ Django應用程式，模擬FBI追捕連環殺手的資料管理，包含探員�
    ```bash
    git clone https://github.com/kalpakjian/fbi-serial-killer.git
    cd fbi-serial-killer
+
+python3 manage.py migrate
+
+python3 fbi_serial_killer/seed_data.py
+
+python3 manage.py runserver
+
+訪問http://127.0.0.1:8000/captures/。
+
+admin page: http://127.0.0.1:8000/admin/
