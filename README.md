@@ -29,7 +29,7 @@ admin page: http://127.0.0.1:8000/admin/
 
 ## 資料測試
 1. 匯出資料：
-   python manage.py dumpdata fbi_serial_killer --indent 2 > fbi_serial_killer/fixtures/data.json
+   python manage.py dumpdata fbi_serial_killer --indent 2 > data.json
 
 2. 格式化資料集
    dumpdata已使用--indent 2格式化，data.json應為可讀JSON。
@@ -38,5 +38,5 @@ admin page: http://127.0.0.1:8000/admin/
    python manage.py flush
 
 4. 匯入資料：
-   python manage.py loaddata fbi_serial_killer/fixtures/data.json   
+   python manage.py loaddata data.json   
    驗證：訪問http://127.0.0.1:8000/captures/，應顯示20筆捉拿記錄。
